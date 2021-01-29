@@ -1,0 +1,13 @@
+C:\Users\hp\Desktop\Lessons\C# Console\Lesson_1\Lesson_1\bin\Debug\netcoreapp3.1\Lesson_1.exe
+C:\Users\hp\Desktop\Lessons\C# Console\Lesson_1\Lesson_1\bin\Debug\netcoreapp3.1\Lesson_1.deps.json
+C:\Users\hp\Desktop\Lessons\C# Console\Lesson_1\Lesson_1\bin\Debug\netcoreapp3.1\Lesson_1.runtimeconfig.json
+C:\Users\hp\Desktop\Lessons\C# Console\Lesson_1\Lesson_1\bin\Debug\netcoreapp3.1\Lesson_1.runtimeconfig.dev.json
+C:\Users\hp\Desktop\Lessons\C# Console\Lesson_1\Lesson_1\bin\Debug\netcoreapp3.1\Lesson_1.dll
+C:\Users\hp\Desktop\Lessons\C# Console\Lesson_1\Lesson_1\bin\Debug\netcoreapp3.1\Lesson_1.pdb
+C:\Users\hp\Desktop\Lessons\C# Console\Lesson_1\Lesson_1\obj\Debug\netcoreapp3.1\Lesson_1.csprojAssemblyReference.cache
+C:\Users\hp\Desktop\Lessons\C# Console\Lesson_1\Lesson_1\obj\Debug\netcoreapp3.1\Lesson_1.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\Lessons\C# Console\Lesson_1\Lesson_1\obj\Debug\netcoreapp3.1\Lesson_1.AssemblyInfo.cs
+C:\Users\hp\Desktop\Lessons\C# Console\Lesson_1\Lesson_1\obj\Debug\netcoreapp3.1\Lesson_1.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Lessons\C# Console\Lesson_1\Lesson_1\obj\Debug\netcoreapp3.1\Lesson_1.dll
+C:\Users\hp\Desktop\Lessons\C# Console\Lesson_1\Lesson_1\obj\Debug\netcoreapp3.1\Lesson_1.pdb
+C:\Users\hp\Desktop\Lessons\C# Console\Lesson_1\Lesson_1\obj\Debug\netcoreapp3.1\Lesson_1.genruntimeconfig.cache
