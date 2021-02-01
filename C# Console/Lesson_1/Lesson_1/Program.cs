@@ -72,10 +72,6 @@ namespace Lesson_1
     //    string JobName;
     //}
 
-    class My
-    {
-
-    }
 
     enum DaysOfWeeks : sbyte // 0 - 255
     {
@@ -148,8 +144,9 @@ namespace Lesson_1
             //Console.WriteLine(MyClass.c);
             //Console.WriteLine(MyClass.s);
 
-            //MyStruct myStruct = new MyStruct();
-            //MyStruct my = new MyStruct(20); // same as the above
+            //MyStruct myStruct;
+            //MyStruct myStruct1 = new MyStruct(); // same as the above
+            //MyStruct my = new MyStruct(20); 
             //Console.WriteLine(my.a);
 
 
