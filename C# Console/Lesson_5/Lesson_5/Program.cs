@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace Lesson_5
 {
@@ -13,25 +14,46 @@ namespace Lesson_5
     {
         static void Main(string[] args)
         {
+            DateTime date = DateTime.Parse("21.10.2003");
+
+            var age = DateTime.Now.Subtract(date).Days / 365;
+
+            Console.WriteLine(age);
+
+
+
+
+            /// /// /// /// 
+
+
+
+            //char ch = (char)65000;
+
+            //Console.WriteLine(ch + "---" + Marshal.SizeOf(ch));
+
+
+            /// /// /// /// 
+
+
 
             //Console.WriteLine(DateTime.Now.ToShortDateString());
 
-            var begin = DateTime.Now;
+            //var begin = DateTime.Now;
 
-            int i = 0;
-            while (i < 10000_000)
-            {
-                i++;
-            }
+            //int i = 0;
+            //while (i < 10000_000)
+            //{
+            //    i++;
+            //}
 
-            var end = DateTime.Now;
+            //var end = DateTime.Now;
 
-            Console.WriteLine(end.Subtract(begin).TotalMilliseconds); // 1 san. = 1000 millisan.
+            //Console.WriteLine(end.Subtract(begin).TotalMilliseconds); // 1 san. = 1000 millisan.
 
 
 
             /// /// /// ///
-            
+
 
 
             //Console.Write("Eded daxil edin: ");
