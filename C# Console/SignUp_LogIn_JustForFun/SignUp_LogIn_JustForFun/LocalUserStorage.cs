@@ -24,11 +24,7 @@ namespace SignUp_LogIn_JustForFun
 
         public bool CheckUser(string name, string password)
         {
-            if (users.Any(x => x.Name == name && x.Password == password))
-            {
-                return true;
-            }
-            return false;
+            return users.Any(x => x.Name == name && x.Password == password);
         }
     }
 }
