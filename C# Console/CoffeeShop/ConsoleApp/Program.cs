@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text.Json;
 using MainApp.Services;
 
 namespace MainApp
@@ -6,29 +9,70 @@ namespace MainApp
     interface IStorageService<T>
     {
         void Save(T data);
+
+        IList<T> Load();
     }
 
     class DBCustomerStorage : IStorageService<Customer>
     {
+        private string path;
+
+        public DBCustomerStorage(string path)
+        {
+            this.path = path;
+        }
+
+        public IList<Customer> Load()
+        {
+            throw new NotImplementedException(); // database-le islemeyi bilmirik
+        }
+
         public void Save(Customer customer)
         {
-            Console.WriteLine(customer.FirstName + " has added to database.");
+            Console.WriteLine(customer.FirstName + $" has added to {path}.");
         }
     }
 
     class JsonStorage<T> : IStorageService<T>
     {
+        private string path;
+        private List<T> list;
+
+        public JsonStorage(string path)
+        {
+            this.path = path;
+
+            if (File.Exists(path))
+            {
+                ReadFromFile();
+            }
+            else list = new List<T>();
+        }
+
+        public IList<T> Load()
+        {
+            return list;
+        }
+
         public void Save(T data)
         {
-            Console.WriteLine(data.ToString() + "saved to json");
+            list.Add(data);
+            WriteToFile();
+        }
+
+        private void ReadFromFile()
+        {
+            string json = File.ReadAllText(path);
+            list = JsonSerializer.Deserialize<List<T>>(json);
+        }
+
+        private void WriteToFile()
+        {
+            string json = JsonSerializer.Serialize(list);
+            File.WriteAllText(path, json);
         }
     }
-
-    class JsonCustomerStorage : JsonStorage<Customer>
-    {
-
-    }
-
+    
 
     interface ICustomerManager
     {
@@ -44,6 +88,16 @@ namespace MainApp
         public virtual void Register(Customer customer)
         {
             _storage.Save(customer);
+        }
+
+        public void PrintAllCustomers()
+        {
+            var customers = _storage.Load();
+
+            foreach (var customer in customers)
+            {
+                Console.WriteLine(customer.FirstName);
+            }
         }
     }
 
@@ -79,14 +133,15 @@ namespace MainApp
     {
         static void Main(string[] args)
         {
-            BaseCustomerManager manager = new StarbucksCustomerManager(
-                new JsonCustomerStorage(), new CheckCardNoService());
+            BaseCustomerManager manager = new NeroCustomerManager(
+                new DBCustomerStorage("NeroCustomerDB.mdf"));
+
 
             manager.Register(new Customer
             {
-                FirstName = "Resad",
-                CardNo = "1234"
+                FirstName = "Resad"
             });
+
         }
     }
 }
