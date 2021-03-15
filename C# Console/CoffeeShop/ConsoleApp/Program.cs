@@ -133,13 +133,17 @@ namespace MainApp
     {
         static void Main(string[] args)
         {
-            BaseCustomerManager manager = new NeroCustomerManager(
-                new DBCustomerStorage("NeroCustomerDB.mdf"));
-
+                                    
+            BaseCustomerManager manager = new StarbucksCustomerManager(
+                new JsonStorage<Customer>("StarBucksJsonStorage.json"), new CheckCardNoService());
 
             manager.Register(new Customer
             {
-                FirstName = "Resad"
+                ID = 10,
+                FirstName = "Resad",
+                LastName = "Mememdov",
+                BirthDate = new DateTime(2003, 10, 21),
+                CardNo = "AA03270ui48"
             });
 
         }

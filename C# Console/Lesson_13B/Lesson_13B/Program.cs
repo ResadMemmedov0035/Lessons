@@ -10,19 +10,18 @@ namespace Lesson_13B
     {
         static void Main(string[] args)
         {
-            Regex regex = new Regex("");
+            Regex regex = new Regex(@"^\+994 (50|51|55|70|77) \d{3} \d{4}$");
 
-            string str = "AA12345678";
+            string input;
+            do
+            {
+                Console.Write("Input your phone: ");
+                input = Console.ReadLine();
 
-            bool check = true;
+            } while (!regex.IsMatch(input));
 
-            if (str[0] != 'A' || str[1] != 'A') check = false;
+            Console.WriteLine("Number is OK!");
 
-            if (str.Length != 10) check = false;
-
-            if (!int.TryParse(str.Substring(2), out int r)) check = false;
-
-            Console.WriteLine(check);
 
             /*
 
